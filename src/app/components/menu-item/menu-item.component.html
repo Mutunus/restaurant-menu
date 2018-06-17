@@ -1,0 +1,4 @@
+<div *ngIf="activeCourse$ | async as activeCourse" (click)="addToCourse(activeCourse, meal)">
+	<p><span>{{ meal.name }}</span> - {{ meal.description }}</p>
+	<p><b>{{ meal.price | currency }}</b></p>
+</div>

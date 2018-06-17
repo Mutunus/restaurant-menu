@@ -1,0 +1,13 @@
+.page-cont div {
+    display: flex;
+    margin-top: 20px;
+}
+
+:host ::ng-deep meal-menu {
+    flex: 2;
+    margin-right: 10px;
+}
+
+:host ::ng-deep order-list {
+    flex: 1
+}

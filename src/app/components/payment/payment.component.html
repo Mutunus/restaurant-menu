@@ -1,0 +1,7 @@
+{{ (orderTotal$ | async) | currency }}
+
+<form (ngSubmit)="makePayment()" [formGroup]="paymentForm">
+    <input formControlName="creditCardNum">
+    <input formControlName="tip">
+    <button type="submit">Pay</button>
+</form>

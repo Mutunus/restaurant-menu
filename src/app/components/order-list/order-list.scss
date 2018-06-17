@@ -1,0 +1,44 @@
+// :host {
+//     flex: 1;
+// }
+
+mat-card {
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.course-cont {
+    margin: 20px 0;
+}
+
+.order-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3, h4 {
+    font-weight: bold;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+p {
+    margin-left: 13px;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+}
+
+mat-icon {
+    font-size: 22px;
+}
+
+mat-icon:hover {
+    color: #b71e1e;
+}

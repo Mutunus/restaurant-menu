@@ -1,0 +1,18 @@
+<ng-container *ngIf="(meals$ | async) as meals">
+	<mat-card>
+		<mat-card-content>
+			<h3><b>Menu - Course {{ activeCourse$ | async }}</b></h3>
+			<mat-tab-group>
+				<mat-tab label="Starters">
+					<menu-item *ngFor="let starter of meals.starter" [meal]="starter"></menu-item>
+				</mat-tab>
+				<mat-tab label="Mains">
+					<menu-item *ngFor="let main of meals.main" [meal]="main"></menu-item>
+				</mat-tab>
+				<mat-tab label="Desserts">
+					<menu-item *ngFor="let dessert of meals.dessert" [meal]="dessert"></menu-item>
+				</mat-tab>
+			</mat-tab-group>
+		</mat-card-content>
+	</mat-card>
+</ng-container>

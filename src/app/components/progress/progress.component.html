@@ -1,0 +1,16 @@
+<mat-card>
+	<mat-card-content>
+		<h3>
+			<b>Order Progress</b>
+			<ng-template [ngIf]="message">
+				- {{ message }}
+			</ng-template>
+		</h3>
+		<section>
+			<mat-progress-bar
+            [mode]="mode || determinate" 
+            [value]="progress$ | async">
+			</mat-progress-bar>
+		</section>
+	</mat-card-content>
+</mat-card>

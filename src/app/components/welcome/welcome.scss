@@ -1,0 +1,35 @@
+.page-cont div:first-child {
+    width: 60%;
+}
+
+.text-cont {
+    margin-top: 10px;
+}
+
+.mat-form-field {
+    width: 40px;
+}
+
+label {
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    height: 40px;
+    font-size: 0.9em;
+}
+
+img {
+    width: 100%
+}
+
+h1 {
+    margin-bottom: 5px;
+}

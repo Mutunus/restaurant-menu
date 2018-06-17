@@ -1,0 +1,32 @@
+<div class="page-cont centered">
+
+    <div>
+
+        <h1>A Wonderful Restaurant</h1>
+
+        <img src="./assets/images/food.jpg"/>        
+
+        <div class="text-cont">
+            <p>At a Wonderful Restaurant we only have one priority – to maximize food delivery efficiency.  Consequently, we have replaced our serving staff with this web application. You are requested to select the number of courses your meal will consist of and then proceed to the menu to choose the dishes for each course. After you have completed payment, our robotic chefs will deliver each course at 5 minute intervals. Please enjoy your stay!</p>
+        </div>
+
+        <form [formGroup]="welcomeForm" (ngSubmit)="toChooseDishes(welcomeForm.get('numOfCourses').value)">
+
+            <div>
+                <label>Number of Courses:</label>
+                <mat-form-field>
+                    <mat-select formControlName="numOfCourses">
+                        <mat-option *ngFor="let num of courseOptions" [value]="num">
+                            {{ num }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <button mat-button type="submit">To Menu<mat-icon>chevron_right</mat-icon></button>
+
+        </form>
+
+    </div>
+
+</div>

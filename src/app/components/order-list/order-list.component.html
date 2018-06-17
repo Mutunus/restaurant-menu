@@ -1,0 +1,18 @@
+<mat-card>
+	<mat-card-content>
+		<h3>Order</h3>
+		<div class="course-cont" *ngFor="let course of order$ | async; let i = index">
+			<h4>Course {{ i + 1 }}</h4>
+			<ng-container *ngIf="course.length > 0; else noMeals">
+				<div class="order-cont" *ngFor="let meal of course">
+					<p>{{ meal.name }}: {{ meal.price | currency }}</p>
+					<mat-icon (click)="removeFromCourse(i + 1, meal)">remove_shopping_cart</mat-icon>
+				</div>
+			</ng-container>
+			<ng-template #noMeals>
+				<p>No orders for this course</p>
+			</ng-template>
+		</div>
+		<p class="total"><b>Total - {{ (total$ | async) | currency }}</b></p>
+	</mat-card-content>
+</mat-card>

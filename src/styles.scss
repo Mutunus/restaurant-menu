@@ -1,0 +1,68 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import './styling/partials/_colors.scss';
+@import './styling/partials/_fonts.scss';
+
+body {
+    background-color: #dad9d9;
+    font-family: $default-font;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    color: #504f4f;
+}
+
+h3, h4, h5 {
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.7em;
+}
+
+button, label, mat-icon {
+    cursor: pointer;
+}
+
+.text-cont {
+    background-color: #efebeb;
+    padding: 15px;
+    text-align: justify;
+}
+
+.page-cont {
+    padding: 8px;
+    height: 100%;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+*::-webkit-scrollbar-track {
+    display: none;
+}
+ 
+*::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #9c9999;
+    cursor: pointer;    
+}
+
+.mat-raised-button:hover {
+    background-color: $light-grey;
+}
+
+.mat-tab-body-wrapper {
+    margin-top: 10px;
+}

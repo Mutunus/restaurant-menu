@@ -1,0 +1,23 @@
+@import './../../../styling/partials/_colors.scss';
+
+div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 8px;
+    min-height: 30px;
+}
+
+div p span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+div:first-child {
+    flex: 5;
+    padding-right: 15px;
+}
+
+div:hover {
+    background-color: $light-grey;
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+<div class="page-cont">
+
+    <ng-container *ngIf="(activeCourse$ | async) as activeCourse">
+
+        <progress-bar [mode]="progressBarMode" [message]="progressBarMessage"></progress-bar>
+
+        <div>
+            <meal-menu></meal-menu>
+            <order-list class="order-list"></order-list>
+        </div>
+
+        <div>
+            <button mat-raised-button *ngIf="!(orderComplete$ | async); else toPayment" (click)="nextCourse(activeCourse + 1)">Next Course</button>
+            <ng-template #toPayment>
+                <button mat-raised-button (click)="makePayment()">Make Payment</button>    
+            </ng-template>
+        </div>
+
+    </ng-container>
+
+</div>

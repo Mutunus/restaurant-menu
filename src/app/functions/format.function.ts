@@ -1,0 +1,1 @@
+export const numToArrayOfNums = (num: number): number[] => Array(num).fill(num - 1).map((x, i) => i + 1)
